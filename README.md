@@ -8,9 +8,11 @@ System.setProperty("jna.library.path", "D:\\DLL_DIRECTORY\\");
 - 2，明明有函数，就是说找不到的问题！
 使用Dependency Walker查看函数的名字，每个人，每次出的名字都不一样！前缀，后缀也经常不一样！各种编译器各种虐心的格式。
 
+```
 map.put("add", "?add@@YAHHH@Z");
 map.put("factorial", "?factorial@@YAHH@Z");
 map.put("Execute", "?Execute@@YAHPEBD0NNNNN@Z");
+```
 
 之类的，进行对应。实际就是实现FunctionMapper接口，把实际的函数名对应过去。
 

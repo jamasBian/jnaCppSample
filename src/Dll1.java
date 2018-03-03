@@ -24,6 +24,7 @@ public interface Dll1 extends StdCallLibrary {
 		}
 		private Dll1Mapper()
 		{
+			System.setProperty("jna.library.path", "D:\\scala0\\jnaCppSample\\");//
 			options = new HashMap<>();
 			options.put(Library.OPTION_FUNCTION_MAPPER, this);
 			map = new HashMap<>();
